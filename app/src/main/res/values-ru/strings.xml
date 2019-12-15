@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Two</string>
+
+    <string name="message">Введите свое сообщение здесь...</string>
+    <string name="preview">Просмотр</string>
+    <string name="email">Почта</string>
+</resources>

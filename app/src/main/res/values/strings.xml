@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Two</string>
+
+    <string name="message">Type your message here...</string>
+    <string name="preview">PREVIEW</string>
+    <string name="email">EMAIL</string>
+
+
+</resources>
