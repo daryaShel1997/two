@@ -387,6 +387,7 @@ color abc_tint_spinner
 color abc_tint_switch_track
 color accent_material_dark
 color accent_material_light
+color background
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -397,6 +398,7 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color button
 color button_material_dark
 color button_material_light
 color colorAccent
@@ -662,6 +664,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable inst
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -674,8 +677,10 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable photo
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable vk
 id ALT
 id CTRL
 id FUNCTION
@@ -773,6 +778,8 @@ id home
 id homeAsUp
 id icon
 id icon_group
+id idInst
+id idVk
 id ifRoom
 id image
 id info
@@ -787,6 +794,7 @@ id list_item
 id message
 id middle
 id multiply
+id my_photo
 id never
 id none
 id normal
@@ -855,6 +863,11 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id tvDateOfBirth
+id tvFullname
+id tvHigherEducation
+id tvPlacOfBirth
+id tvSecondaryEducation
 id unchecked
 id uniform
 id up
@@ -950,6 +963,11 @@ string message
 string preview
 string search_menu_title
 string status_bar_notification_info_overflow
+string strDateOfBirth
+string strFullname
+string strHigherEducation
+string strPlacOfBirth
+string strSecondaryEducation
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

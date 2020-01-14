@@ -1,13 +1,18 @@
 package ru.daryas.two;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +28,7 @@ public class SecondActivity extends AppCompatActivity {
         giveTextt = getIntent().getStringExtra("KEY_STR");
        getText.setText(giveTextt);
 
+
         Button btnEmail=  findViewById(R.id.email);
         btnEmail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +42,21 @@ public class SecondActivity extends AppCompatActivity {
                 }
             }
         });
+
+        LinearLayout myLayout = findViewById(R.id.content);
+        TextView tv = new TextView(this);
+        tv.setText("Created by code!");
+        tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
+        tv.setTextColor(ContextCompat.getColor(this, R.color.colorAccent));
+        LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT, // width
+                ViewGroup.LayoutParams.MATCH_PARENT); // height
+        linearLayoutParams.gravity = Gravity.CENTER_HORIZONTAL;
+        tv.setLayoutParams(linearLayoutParams);
+        myLayout.addView(tv);
+
+
+
 
     }
     public void composeEmail(String[] addresses, String text) {

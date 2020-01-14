@@ -4,4 +4,9 @@
     <string name="message">Введите свое сообщение здесь...</string>
     <string name="preview">Просмотр</string>
     <string name="email">Почта</string>
+    <string name="strFullname">Даша Шел</string>
+    <string name="strDateOfBirth">Дата рождения: 08/12/1997</string>
+    <string name="strPlacOfBirth">Место рождения: Донецк</string>
+    <string name="strSecondaryEducation">Среднее образование: Лицй "Интеллект"</string>
+    <string name="strHigherEducation">Высшее образование образование: Южный Федеральный Университет</string>
 </resources>

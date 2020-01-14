@@ -4,6 +4,12 @@
     <string name="message">Type your message here...</string>
     <string name="preview">PREVIEW</string>
     <string name="email">EMAIL</string>
+    <string name="strFullname">Dasha Shel</string>
+    <string name="strDateOfBirth">Date of Birth: 08/12/1997</string>
+    <string name="strPlacOfBirth">Place of Birth: Donetsk</string>
+
+    <string name="strSecondaryEducation">Secondary education: Lyceum "Intellect"</string>
+    <string name="strHigherEducation">Higher education: South Federal University</string>
 
 
 </resources>
