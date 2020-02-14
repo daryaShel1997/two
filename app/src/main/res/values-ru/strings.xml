@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Two</string>
+    <string name="app_name">NY Times</string>
 
     <string name="message">Введите свое сообщение здесь...</string>
     <string name="preview">Просмотр</string>
@@ -9,4 +9,5 @@
     <string name="strPlacOfBirth">Место рождения: Донецк</string>
     <string name="strSecondaryEducation">Среднее образование: Лицй "Интеллект"</string>
     <string name="strHigherEducation">Высшее образование образование: Южный Федеральный Университет</string>
+    <string name="strAboutTheAuthor">Об авторе</string>
 </resources>
