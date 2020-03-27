@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Two</string>
+    <string name="app_name">NY Times</string>
 
     <string name="message">Type your message here...</string>
     <string name="preview">PREVIEW</string>
@@ -10,6 +10,11 @@
 
     <string name="strSecondaryEducation">Secondary education: Lyceum "Intellect"</string>
     <string name="strHigherEducation">Higher education: South Federal University</string>
+    <string name="strAboutTheAuthor">About the author</string>
 
+    <string name="strSearchLine">Enter text ...</string>
+    <string name="strSearchButton">Search</string>
+
+    <string name="strBack">Back to application</string>
 
 </resources>

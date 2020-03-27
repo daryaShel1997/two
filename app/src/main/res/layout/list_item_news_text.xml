@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:contentPadding="8dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="8dp">
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="left"
+            tools:src="@tools:sample/avatars"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/list_item_height"
+            android:orientation="vertical"
+            android:padding="@dimen/list_item_padding">
+
+            <TextView
+                android:id="@+id/section"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/section_size_vertical"
+                tools:text="@tools:sample/full_names"
+                android:textColor="#3f3f3f"
+                android:textAllCaps="true"
+                android:layout_gravity="left"/>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/title_size_vertical"
+                tools:text="@tools:sample/full_names"
+                android:layout_marginStart="@dimen/avatar_size"
+                android:textColor="#3f3f3f"
+                android:textStyle="bold"
+                android:layout_gravity="right"/>
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_size_vertical"
+                tools:text="@tools:sample/backgrounds/scenic"
+                android:textColor="#3f3f3f"
+                android:layout_marginStart="@dimen/avatar_size"
+                android:layout_gravity="right"
+                />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/date_size_vertical"
+                tools:text="@tools:sample/full_names" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
+

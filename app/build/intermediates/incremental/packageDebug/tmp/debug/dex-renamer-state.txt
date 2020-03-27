@@ -1,7 +1,13 @@
-#Sun Jan 12 12:07:36 MSK 2020
-base.0=F\:\\Desktop\\Study\\Android_Courses\\two\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+#Fri Mar 27 10:13:20 EET 2020
+path.3=classes.dex
+path.2=classes.dex
 path.1=classes.dex
-renamed.1=classes2.dex
 path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
-base.1=F\:\\Desktop\\Study\\Android_Courses\\two\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.3=F\:\\Desktop\\Study\\Android_Courses\\two\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.2=F\:\\Desktop\\Study\\Android_Courses\\two\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+base.1=E\:\\Dasaaaaaaaaaaaa\\two\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.0=E\:\\Dasaaaaaaaaaaaa\\two\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
