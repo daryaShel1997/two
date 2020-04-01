@@ -1,110 +1,88 @@
 package ru.daryas.two;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.core.view.MarginLayoutParamsCompat;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.util.TypedValue;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import java.net.URI;
+import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+import ru.daryas.two.ActivityFragment.AboutFragment;
+import ru.daryas.two.ActivityFragment.GifFragment;
+import ru.daryas.two.ActivityFragment.RecyclervFragment;
 
-private TextView etInputTexr;
-private Button btnPreview;
-ImageView imgVk, imgInst;
-TextView textFullname, textDateOfBirth, textPlacOfBirth, textSecondaryEducation, textHigherEducation;
-public static  final String KEY_STR ="KEY_STR";
-    public static  final String TAG ="MainActivity";
+public class MainActivity extends AppCompatActivity  {
+    private DrawerLayout mDrawerLayout;
+
+    final static String TAG_1 = "fragment1";
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etInputTexr = findViewById(R.id.input_text);
-        btnPreview=  findViewById(R.id.preview);
+        mDrawerLayout = findViewById(R.id.my_drawer_layout);
+        toolbar = findViewById(R.id.toolbar);
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+//        setSupportActionBar(toolbar);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mDrawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        if (savedInstanceState == null) {
+            GifFragment frag3 = new GifFragment();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.content_frame, frag3, TAG_1)
+                 //   .addToBackStack(null)
+                    .commit();
+        }
+
+        navigationView.setNavigationItemSelectedListener(
+                menuItem -> {
+                    Intent intent;
+
+                    switch (menuItem.getItemId()) {
+                        case R.id.idnews:
+                            GifFragment frag1 = new GifFragment();
+                            getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.content_frame, frag1, TAG_1)
+                                    .addToBackStack(null)
+                                    .commit();
+                            break;
+                        case R.id.idgif:
+                            RecyclervFragment frag2 = new RecyclervFragment();
+                            getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.content_frame, frag2, TAG_1)
+                                    .addToBackStack(null)
+                                    .commit();
+                            break;
 
 
-        textFullname  = findViewById(R.id.tvFullname);
-        textDateOfBirth = findViewById(R.id.tvDateOfBirth);
-        textPlacOfBirth  = findViewById(R.id.tvPlacOfBirth);
-        textSecondaryEducation = findViewById(R.id.tvSecondaryEducation);
-        textHigherEducation = findViewById(R.id.tvHigherEducation);
+                        case R.id.idabout:
+                            AboutFragment frag3 = new AboutFragment();
+                            getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.content_frame, frag3, TAG_1)
+                                    .addToBackStack(null)
+                                    .commit();
 
-        btnPreview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSecondActivity();
-            }
-        });
+                            break;
 
-
-        imgVk=  findViewById(R.id.idVk);
-
-        imgVk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri address = Uri.parse("https://vk.com/id109839057");
-                Intent openLinkIntent = new Intent(Intent.ACTION_VIEW, address);
-
-                if (openLinkIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(openLinkIntent);
-                } else {
-                    Log.d("Intent", "Не получается обработать намерение!");
-                }
-            }
-        });
-
-        imgInst=  findViewById(R.id.idInst);
-        imgInst.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri address = Uri.parse("https://www.instagram.com/dashashel1997/");
-                Intent openLinkIntent = new Intent(Intent.ACTION_VIEW, address);
-
-                if (openLinkIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(openLinkIntent);
-                } else {
-                    Log.d("Intent", "Не получается обработать намерение!");
-                }
-            }
-        });
-
-
-        RelativeLayout myLayout = findViewById(R.id.content);
-
-        TextView tv = new TextView(this);
-        tv.setText("(c) 2019 Dasha");
-        tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
-        tv.setTextColor(ContextCompat.getColor(this, R.color.colorPrimary));
-
-        RelativeLayout.LayoutParams relativeLayoutParams = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, // width
-                ViewGroup.LayoutParams.WRAP_CONTENT); // height
-
-        relativeLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        relativeLayoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
-
-        tv.setLayoutParams(relativeLayoutParams);
-        myLayout.addView(tv, relativeLayoutParams);
+                    }
+                    menuItem.setChecked(true);
+                    mDrawerLayout.closeDrawers();
+                    return true;
+                });
     }
 
-    public void openSecondActivity()
-    {
-        Intent scondActivityIntent = new Intent(this, SecondActivity.class);
-        scondActivityIntent.putExtra(KEY_STR, etInputTexr.getText().toString());
-        startActivity(scondActivityIntent);
-    }
+
 }
