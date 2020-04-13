@@ -1,122 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:id="@+id/content"
+    android:id="@+id/my_drawer_layout"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/my_photo"
-        android:layout_width="wrap_content"
-        android:layout_height="285dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:scaleType="fitStart"
-        android:src="@drawable/photo" />
-
-    <TextView
-        android:id="@+id/tvFullname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/my_photo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="0dp"
-        android:text="@string/strFullname"
-        android:textSize="50sp"
-        app:layout_constraintTop_toBottomOf="@+id/my_photo" />
-
-    <TextView
-        android:id="@+id/tvDateOfBirth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvFullname"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/strDateOfBirth"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tvPlacOfBirth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvDateOfBirth"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/strPlacOfBirth"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tvSecondaryEducation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvPlacOfBirth"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/strSecondaryEducation"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tvHigherEducation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvSecondaryEducation"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/strHigherEducation"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/input_text"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_below="@+id/tvHigherEducation"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:hint="@string/message" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/preview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/input_text"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/preview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/button"/>
+<!--        <android.support.v7.widget.Toolbar-->
+<!--            android:id="@+id/toolbar2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minHeight="?attr/actionBarSize"-->
+<!--            android:background="?attr/colorPrimary"-->
+<!--            theme="@style/ThemeOverlay.AppCompat.ActionBar" />-->
 
-    <ImageView
-        android:id="@+id/idVk"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/preview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/vk" />
+        <include
+            layout="@layout/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <ImageView
-        android:id="@+id/idInst"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/preview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@+id/idVk"
-        android:layout_marginStart="8dp"
-        android:src="@drawable/inst" />
-</RelativeLayout>
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FAF0BE"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+<!--    app:headerLayout="@layout/header"-->

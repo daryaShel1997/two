@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Two</string>
+    <string name="app_name">NY Times</string>
 
     <string name="message">Введите свое сообщение здесь...</string>
     <string name="preview">Просмотр</string>
@@ -7,6 +7,18 @@
     <string name="strFullname">Даша Шел</string>
     <string name="strDateOfBirth">Дата рождения: 08/12/1997</string>
     <string name="strPlacOfBirth">Место рождения: Донецк</string>
-    <string name="strSecondaryEducation">Среднее образование: Лицй "Интеллект"</string>
-    <string name="strHigherEducation">Высшее образование образование: Южный Федеральный Университет</string>
+    <string name="strSecondaryEducation">Среднее образование: Лицей "Интеллект"</string>
+    <string name="strHigherEducation">Высшее образование: Южный Федеральный Университет</string>
+    <string name="strAboutTheAuthor">Об авторе</string>
+    <string name="strSearchLine">Введите текст ...</string>
+    <string name="strSearchButton">Поиск</string>
+    <string name="strBack">Вернуться к приложению</string>
+
+    <string name="navigation_drawer_open">Открыто navigation drawer</string>
+    <string name="navigation_drawer_close">Закрыто navigation drawer</string>
+
+
+    <string name="strNews">Новости</string>
+    <string name="strGif">Список gif-ок</string>
+    <string name="strGifDB">Список gif-ок в БД</string>
 </resources>

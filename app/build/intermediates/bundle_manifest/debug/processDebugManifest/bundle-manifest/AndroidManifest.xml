@@ -8,7 +8,10 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="29" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name="ru.daryas.two.DB.App"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -18,14 +21,27 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="ru.daryas.two.ActivityFragment.DBActivity" />
+        <activity android:name="ru.daryas.two.ActivityFragment.AboutFragment" />
+        <activity android:name="ru.daryas.two.ActivityFragment.GifFragment" />
+        <activity android:name="ru.daryas.two.ActivityFragment.RecyclervFragment" />
+        <activity android:name="ru.daryas.two.NewsItem" />
+        <activity android:name="ru.daryas.two.NewsDeteilsActivity" />
         <activity android:name="ru.daryas.two.SecondActivity" />
-        <activity android:name="ru.daryas.two.MainActivity" >
+        <activity
+            android:name="ru.daryas.two.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
     </application>
 
 </manifest>

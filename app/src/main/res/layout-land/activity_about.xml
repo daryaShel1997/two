@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:id="@+id/content">
+
+    <ImageView
+        android:id="@+id/my_photo"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/photo" />
+
+    <TextView
+        android:id="@+id/tvFullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@+id/my_photo"
+        android:text="@string/strFullname"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/my_photo" />
+
+    <TextView
+        android:id="@+id/tvDateOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFullname"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@+id/my_photo"
+        android:text="@string/strDateOfBirth"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvPlacOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDateOfBirth"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@+id/my_photo"
+        android:text="@string/strPlacOfBirth"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvSecondaryEducation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPlacOfBirth"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@+id/my_photo"
+        android:text="@string/strSecondaryEducation"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvHigherEducation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSecondaryEducation"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@+id/my_photo"
+        android:text="@string/strHigherEducation"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="470dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tvHigherEducation"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/message" />
+
+    <Button
+        android:id="@+id/preview"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHigherEducation"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="22dp"
+        android:layout_toEndOf="@+id/input_text"
+        android:text="@string/preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/button"/>
+
+    <ImageView
+        android:id="@+id/idVk"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/preview"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/vk" />
+
+    <ImageView
+        android:id="@+id/idInst"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/preview"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/idVk"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/inst" />
+</RelativeLayout>

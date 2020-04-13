@@ -3,7 +3,6 @@ package ru.daryas.two;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
     public static  final String KEY_STR ="KEY_STR";
@@ -54,10 +52,6 @@ public class SecondActivity extends AppCompatActivity {
         linearLayoutParams.gravity = Gravity.CENTER_HORIZONTAL;
         tv.setLayoutParams(linearLayoutParams);
         myLayout.addView(tv);
-
-
-
-
     }
     public void composeEmail(String[] addresses, String text) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
